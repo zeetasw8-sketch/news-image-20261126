@@ -40,6 +40,7 @@ const MAX_BYTES = 1024 * 1024; // the rules cap the image at 1 MiB
 const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
 const EXPECTED_WIDTH = 1024;
 const EXPECTED_HEIGHT = 1024;
+const ENTRY_FILENAME = "entry.png";
 
 function digest(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -73,8 +74,8 @@ function readBundledImage(path) {
 function main() {
   const destDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
   const here = dirname(fileURLToPath(import.meta.url));
-  const bundled = join(here, "entry.png");
-  const target = join(destDir, "entry.png");
+  const bundled = join(here, ENTRY_FILENAME);
+  const target = join(destDir, ENTRY_FILENAME);
 
   const image = readBundledImage(bundled);
 
