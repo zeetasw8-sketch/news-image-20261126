@@ -1,18 +1,21 @@
-# Submission — news-image-20261126
+# news-image-20261126 — SUBMISSION
 
-- Competition: `news-image-20261126` ($100)
-- Title: Thursday 26 November 2026 World Frontpage: 35 Dated Stories, 9 Regions, 14 Fields, 13 Places, UTC Timeline & Date-Check Audit
-- Submission ID: `01a2162e-2e06-7321-820e-238da9c61041`
-- Commit: `ceddbcb0181ebe41054fd3d6715dbe0a06a227f6`
-- Repo root: `db1e454912d66551b51b9b990021536b047c59e7` (drand quicknet round 34288083, emitted 2026-11-26T04:33:33Z, after the 07:00 WIB opening)
-- Bundle sha256: `d8a4b8822c93e27651cc485e5cbf040f5a79a6bf551531f3a1c7c6c8c7945537`
-- Stage: `checked`, outcome `null`, round 2 (verified 2026-11-26 11:49 WIB)
-- Payout wallet: `7quNSmAwm7p6omEVmvXgPs6p6rM6VrmeQAoJK1KsWne4`
-- Claim code: `AF-TEVHN-3742B-7EW63-KN57X`
+## v3 (current, Force_Last — counts)
+- Submission: 01a216e9-5465-7185-b63a-f475cc2107e1
+- Commit: 08e3a32fd4be942caf760d666bb0f54f9d4601d9
+- Stage: checked, round 3, outcome null
+- entry.png: 235,470 bytes, sha256 f25ad8f0c7abfe56a571ee4335cf388405c7bed5a154f526b01e0ee71dcae291
+- Claim code: AF-9623P-89FW3-SBDNQ-D9HN4
+- Submitted: 26 Nov 2026 ~15:12 WIB (08:12 UTC)
+- Deadline: 28 Nov 2026 07:00 WIB (00:00 UTC)
+- v3 changes: Nvidia close corrected to verified $149.30 (-3.91%); removed unverified chips (65% deaths 18-24, 60-70 mph, St Louis snow 6-7in, Charleston tide >8ft, Merkury "10 crew hurt"); Macy's Parade now reports postponement to Sat 28 Nov; DATE CHECK names the Nvidia correction; README has a full "v3 accuracy corrections" section.
+- Check: reproduces 44.7% authored (152/340), absent 37.4% — PASS.
 
-Note: the first submit (01a21628, commit 29f8cd0) was rejected by the
-server for thinking_reproduces (6.6% authored, README.md 77 lines
-absent). Fixed by rewriting README.md from scratch in a post-opening
-session and re-bundling both slices; the v2 check passed
-thinking_reproduces at 58.3% (91/156 lines authored) and the resubmit
-reached stage `checked`. The v1 claim code is void (rejected entry).
+## v2 (superseded by Force_Last)
+- Submission: 01a2162e-2e06-7321-820e-238da9c61041
+- Stage: checked, round 2
+- Claim code: (superseded, do not use — see git history)
+- v2 carried the WRONG Nvidia close ($142.90/-8.03%, intraday low) and unverified chips.
+
+## v1 (superseded)
+- Submission: 01a21628 (rejected: thinking_reproduces 6.6%)
