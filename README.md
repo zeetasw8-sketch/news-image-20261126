@@ -21,6 +21,32 @@ the close — and removed unverified items (the "65% of deaths age
 "Charleston tide >8 ft", and the "10 crew hurt" Merkury figure).
 The Macy's Parade hero now reports the postponement to Sat 28 Nov.
 
+### v3 accuracy corrections (what changed and why)
+- **Nvidia close.** v2 printed "−8.03% to $142.90" as the Tuesday
+  close. That was the intraday low, not the close. Five sources
+  (Finnhub, MarketBeat, stockanalysis, Fool, Reuters) confirm the
+  verified close: **$149.30, −3.91%**. The hero, the timeline, the
+  DATE CHECK footer and this section now all use $149.30 / −3.91%.
+- **"65% of deaths age 18–24".** v2's Russia hero chip claimed
+  65% of 2025 deaths were Russians aged 18–24. That figure was
+  never verified, so the chip now reads ">700,000 incl. missing",
+  which is the verified Mediazona total.
+- **Nor'easter gusts.** v2 printed "60–70 mph". The verified NWS
+  figure is gusts **up to 65 mph**, so the hero now reads "65 MPH".
+- **St. Louis snow.** v2's chip claimed "6–7 in snow in St.
+  Louis". Never verified — removed. The chip now reads "Balloons
+  grounded • Rain 1–2 in", both verified.
+- **Macy's Parade.** v2 said the parade "steps off" at 08:30 ET
+  with "balloons at risk". The parade was **postponed to Sat 28
+  Nov** (announced 25 Nov) — the first postponement in 100 years.
+  The hero and timeline now report the postponement.
+- **Charleston tide.** v2's timeline claimed "Charleston tide
+  >8 ft". Never verified — removed from the timeline.
+- **Merkury.** v2's brief said "10 crew hurt" (an RT figure).
+  The LNA figure is 2 Libyan officers dead, so the brief now
+  reads "Libya vows revenge for drone hit on Russian warship"
+  (CONFIRMED).
+
 ## Hero stories
 
 **Russian military deaths reach 490,334.** Leaked Rosstat death
