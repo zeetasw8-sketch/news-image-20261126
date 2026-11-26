@@ -5,10 +5,12 @@
 // broadsheet front page with 35 dated stories across 9 regions:
 // three heroes — leaked Rosstat data putting Russian military
 // deaths at 490,334 (Feb 2022–Sep 2026, via BBC Russian /
-// Mediazona); Nvidia falling another 8.03% to $142.90 on
-// Tuesday's close, with Trump open to pardoning Jensen Huang;
-// a Thanksgiving nor'easter bringing 60–70 mph gusts to the
-// U.S. East Coast as the 100th Macy's Parade steps off — plus
+// Mediazona); Nvidia falling another 3.91% to $149.30 on
+// Tuesday's close (verified; $142.90 was the intraday low),
+// with Trump open to pardoning Jensen Huang;
+// a Thanksgiving nor'easter bringing gusts up to 65 mph to the
+// U.S. East Coast as the 100th Macy's Parade is postponed to
+// Saturday 28 Nov — plus
 // ten medium cards (Houthi strike on Riyadh, Huawei guilty on
 // 10 of 12 counts, Shanghai party chief probed, first Pakistani
 // in orbit, Bangladesh garment wage +36%, U.S. tariffs, Australia

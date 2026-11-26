@@ -14,28 +14,34 @@ This is an entry for the make.fun competition `news-image-20261126`
 strict date discipline, a verification audit, and a clear
 structure.
 
+v3 (26 Nov 2026): corrected the Nvidia close to the verified
+$149.30 (−3.91%) — v2's $142.90/−8.03% was the intraday low, not
+the close — and removed unverified items (the "65% of deaths age
+18–24" chip, "60–70 mph" gusts, "6–7 in snow in St. Louis",
+"Charleston tide >8 ft", and the "10 crew hurt" Merkury figure).
+The Macy's Parade hero now reports the postponement to Sat 28 Nov.
+
 ## Hero stories
 
 **Russian military deaths reach 490,334.** Leaked Rosstat death
 records, analysed by BBC Russian and Mediazona, put Russian
 military deaths at 490,334 from February 2022 to September 2026.
-Over 700,000 including the missing. In 2025, 65% of deaths among
-Russians aged 18-24 were caused by the war. The Kremlin declined
+Over 700,000 including the missing. The Kremlin declined
 to comment. Sources: BBC Russian, Mediazona, Le Monde, 24-25 Nov
 2026. Label: CONFIRMED.
 
-**Nvidia down 8.03% to $142.90.** Nvidia shares closed Tuesday
-25 November down 8.03% at $142.90, after a 5.86% fall on Monday.
-Most of Friday's record +31.48% surge was wiped out in two days.
+**Nvidia down 3.91% to $149.30.** Nvidia shares closed Tuesday
+25 November down 3.91% at $149.30 (verified close; $142.90 was
+the intraday low), after a 5.86% fall on Monday.
 Trump is open to pardoning CEO Jensen Huang. U.S. markets are
 closed on 26 November for Thanksgiving, so there is no newer
 price. Sources: Finnhub, NY Post, 25 Nov 2026. Label: CONFIRMED.
 
 **Thanksgiving nor'easter.** A nor'easter peaks on 26 November
-with 60-70 mph gusts, coastal flooding from Georgia to Long
-Island, and 6-7 inches of wet snow in St. Louis, as the 100th
-Macy's Thanksgiving Day Parade steps off in New York. Its
-balloons are at risk if gusts pass 34 mph. Sources: NWS/NOAA,
+with gusts up to 65 mph and 1–2 inches of rain, as the 100th
+Macy's Thanksgiving Day Parade is postponed to Saturday 28
+November — the first postponement in 100 years. New Jersey
+declares an emergency in 21 counties. Sources: NWS/NOAA,
 Reuters, 26 Nov 2026. Label: OFFICIAL.
 
 ## Medium cards
