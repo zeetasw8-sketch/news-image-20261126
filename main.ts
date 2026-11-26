@@ -38,11 +38,8 @@ import { fileURLToPath } from "node:url";
 
 const MAX_BYTES = 1024 * 1024; // the rules cap the image at 1 MiB
 const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
-
-const destDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-const here = dirname(fileURLToPath(import.meta.url));
-const bundled = join(here, "entry.png");
-const target = join(destDir, "entry.png");
+const EXPECTED_WIDTH = 1024;
+const EXPECTED_HEIGHT = 1024;
 
 function digest(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -65,23 +62,34 @@ function readBundledImage(path) {
   // The PNG header (IHDR) stores the pixel dimensions at fixed offsets;
   // this entry must be exactly 1024x1024, so check both numbers.
   const [picWidth, picHeight] = [bytes.readUInt32BE(16), bytes.readUInt32BE(20)];
-  if (picWidth !== 1024 || picHeight !== 1024) {
-    throw new Error(`entry.png is ${picWidth}x${picHeight}, expected 1024x1024`);
+  if (picWidth !== EXPECTED_WIDTH || picHeight !== EXPECTED_HEIGHT) {
+    throw new Error(
+      `entry.png is ${picWidth}x${picHeight}, expected ${EXPECTED_WIDTH}x${EXPECTED_HEIGHT}`,
+    );
   }
   return bytes;
 }
 
-const image = readBundledImage(bundled);
+function main() {
+  const destDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+  const here = dirname(fileURLToPath(import.meta.url));
+  const bundled = join(here, "entry.png");
+  const target = join(destDir, "entry.png");
 
-mkdirSync(destDir, { recursive: true });
-copyFileSync(bundled, target);
+  const image = readBundledImage(bundled);
 
-// Read the copy back and compare it byte for byte: a truncated or
-// corrupted write must fail loudly instead of grading a broken image.
-const delivered = readFileSync(target);
-if (!delivered.equals(image)) {
-  throw new Error("output entry.png differs from the bundled entry.png");
+  mkdirSync(destDir, { recursive: true });
+  copyFileSync(bundled, target);
+
+  // Read the copy back and compare it byte for byte: a truncated or
+  // corrupted write must fail loudly instead of grading a broken image.
+  const delivered = readFileSync(target);
+  if (!delivered.equals(image)) {
+    throw new Error("output entry.png differs from the bundled entry.png");
+  }
+  console.log(
+    `wrote ${target} (${delivered.length} bytes, sha256=${digest(delivered)}, verified identical)`,
+  );
 }
-console.log(
-  `wrote ${target} (${delivered.length} bytes, sha256=${digest(delivered)}, verified identical)`,
-);
+
+main();
