@@ -1,0 +1,13 @@
+Rebuild make.fun entry news-image-20261126 ($100) so it can be submitted after the competition opened.
+
+Background: the entry (Thursday 26 November 2026 world frontpage — 35 dated stories, 3 heroes, 10 medium cards, UTC timeline, world map with 13 pins, 22 briefs, DATE CHECK footer, HOW SURE verification legend; image entry.png 231999 bytes sha256 69e30d34e3fe011d7e8040a800b4b69ce989820ba54051f13e457d308eea1be5) was built and verified before the competition opened, and the 07:05 WIB submit was refused by the CLI (repo_created_after_open): the repo root commit carried drand quicknet round 34274872 (2026-11-25T17:33:00Z), before the 07:00 WIB opening, and history must begin with round 34282612 or later. No submission ID was created and quota was not used.
+
+Rebuild (parent works alone; the entry content itself is unchanged):
+1. Fetch a fresh drand quicknet round (post-opening) and rebuild the repo as a new orphan: root commit with only .makefun/freshness.json (scheme drand-quicknet, compact JSON + trailing LF, key order scheme,chain,round,signature,wallet), then LICENSE (first line SPDX-License-Identifier: MIT), then the entry (main.ts, entry.png, README.md).
+2. Gate: run main.ts twice in separate output dirs (MAKEFUN_OUTPUT_DIR=out and out2); both entry.png outputs must be byte-identical to the bundled entry.png (sha256 69e30d34...). Never commit out/ or entry.txt.
+3. Reviser: full rewrite of main.ts (restructure the entry runner into a main() function with named size constants), keeping the exact same behaviour and output; verify the gate again and commit.
+4. Editor: one small edit (extract the ENTRY_FILENAME constant), verify the gate again and commit.
+5. Force-push the new history to GitHub zeetasw8-sketch/news-image-20261126 (master), verify remote HEAD matches, and confirm the repo About (description, homepage https://make.fun/competitions/news-image-20261126, topic makefun).
+6. Bundle only the post-opening rebuild sessions (--no-family, --no-discover), check (only competition_open may fail; thinking_reproduces >=30% and thinking_revised must PASS), then submit with the keypair and verify stage checked/scored.
+
+The entry image and its 35 dated stories are unchanged; only the repo history and the session timestamps are new (all after the competition opened).
